@@ -1,7 +1,7 @@
 <?php
 require 'openid.php'; // la librairie LightOpenID doit être dans le même dossier
 
-$openid = new LightOpenID('file:///C:/Users/matis/Desktop/baldwinrp-site/index.html'); // Remplace par ton domaine, par exemple 'localhost' pour tests locaux
+$openid = new LightOpenID('https://matbeg7878.github.io/BaldwinRP.github.fr'); // Remplace par ton domaine, par exemple 'localhost' pour tests locaux
 
 if (!$openid->mode) {
     // On lance la connexion Steam
@@ -18,7 +18,7 @@ if (!$openid->mode) {
         $steamID64 = $matches[1];
 
         // Appel API Steam pour récupérer le pseudo
-        $apikey = 'F5B6717218172A9232790359EE00DF65'; // Ta clé Steam Web API (https://steamcommunity.com/dev/apikey)
+        $apikey = '6FB2CF7DD3A6CD9AEE5F30559342D1D4'; // Ta clé Steam Web API (https://steamcommunity.com/dev/apikey)
         $url = "https://api.steampowered.com/ISteamUser/GetPlayerSummaries/v2/?key=$apikey&steamids=$steamID64";
 
         $json = file_get_contents($url);
