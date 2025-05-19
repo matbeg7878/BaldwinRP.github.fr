@@ -1,4 +1,10 @@
 body {
+ 
+  background-image: url('image.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-color: #fff; /* Couleur de secours si l'image ne charge pas */
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
   background-color: #0f0f0f;
